@@ -1,8 +1,8 @@
-const DAY_NUMBER: [&str; 12] = [
+const DAY_NUMBER: [&'static str; 12] = [
     "first", "second", "thrid", "fourth", "fifth", "sixth", "seventh", "eight", "ninth", "tenth",
     "eleventh", "twelfth",
 ];
-const STUFF_MY_LOVER_SENT: [&str; 12] = [
+const STUFF_MY_LOVER_SENT: [&'static str; 12] = [
     "A partridge in a pear tree",
     "Two turtle-doves",
     "Three French hens",
@@ -27,7 +27,7 @@ fn main() {
                 if i > 0 && j == 0 {
                     format!("And {}", STUFF_MY_LOVER_SENT[j].to_lowercase())
                 } else {
-                    STUFF_MY_LOVER_SENT[j].to_owned()
+                    STUFF_MY_LOVER_SENT[j].to_string()
                 }
             );
         }
